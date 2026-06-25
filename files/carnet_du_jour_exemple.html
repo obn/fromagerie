@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Carnet de commandes — 2026-06-24</title>
+<style>
+  :root {
+    --paper: #fbf9f3; --ink: #1a2a4a; --unsure-bg: #fff3a0; --muted: #8a8470;
+    --line: #ddd7c2; --done-bg: #eef6ec; --accent: #2f6f4f;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body { margin: 0; background: #e7e2d3; font-family: -apple-system, 'Segoe UI', system-ui, sans-serif; padding-bottom: 80px; }
+  header { position: sticky; top: 0; z-index: 10; background: var(--ink); color: white; padding: 14px 18px;
+    display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+  header h1 { font-size: 1.05rem; margin: 0; font-weight: 600; }
+  header .progress { font-size: 0.85rem; opacity: 0.85; }
+  .legend { max-width: 900px; margin: 14px auto 4px; padding: 0 14px; font-size: 0.8rem; color: var(--muted);
+    display: flex; gap: 16px; flex-wrap: wrap; }
+  .legend .swatch { display: inline-block; width: 11px; height: 11px; background: var(--unsure-bg);
+    border: 1px solid #d8c400; margin-right: 4px; vertical-align: middle; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 8px 14px 0; }
+  .client-block { background: var(--paper); border-radius: 10px; margin-bottom: 16px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12); overflow: hidden; }
+  .client-name { font-weight: 700; color: var(--ink); font-size: 1rem; padding: 10px 12px;
+    background: #f2eedf; border-bottom: 1px solid var(--line); }
+  .row { display: grid; grid-template-columns: 44px 1fr 110px 110px; gap: 8px; align-items: center;
+    padding: 9px 12px; border-bottom: 1px solid var(--line); transition: background 0.15s; }
+  .row:last-child { border-bottom: none; }
+  .row.done { background: var(--done-bg); }
+  .row.done .prodline { text-decoration: line-through; color: #6b7a6b; }
+  .unsure-row { background: #fffaf0; }
+  .check { width: 30px; height: 30px; accent-color: var(--accent); cursor: pointer; }
+  .prodline { font-size: 0.92rem; color: #222; }
+  .prodline .qty { font-weight: 700; color: var(--ink); margin-right: 6px; }
+  .prodline .ref { color: #4a7a5a; font-size: 0.82rem; }
+  .unsure { background: var(--unsure-bg); padding: 0 2px; border-radius: 2px; }
+  input.field { width: 100%; border: 1px solid #cfc8af; border-radius: 6px; padding: 7px 6px;
+    font-size: 0.85rem; background: white; text-align: center; }
+  input.field:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px rgba(47,111,79,0.25); }
+  .col-label { font-size: 0.65rem; text-transform: uppercase; color: var(--muted); text-align: center; letter-spacing: 0.03em; }
+  .head-row { display: grid; grid-template-columns: 44px 1fr 110px 110px; gap: 8px; padding: 4px 12px 0; }
+  .footer-note { max-width: 900px; margin: 18px auto 0; padding: 0 14px; font-size: 0.78rem; color: var(--muted); }
+  #resetBtn { background: #b3261e; color: white; border: none; padding: 8px 14px; border-radius: 6px; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>2026-06-24 — Carnet de commandes</h1>
+    <span class="progress" id="progress">0 / 0 fait</span>
+  </header>
+
+  <div class="legend">
+    <span><span class="swatch"></span> à vérifier (lecture PDF incertaine)</span>
+    <span>Généré automatiquement depuis 11 ligne(s) de commande</span>
+  </div>
+
+  <div class="wrap">
+    <div class="head-row">
+      <span></span><span class="col-label">Produit</span><span class="col-label">DLC</span><span class="col-label">N° lot</span>
+    </div>
+    
+    <div class="client-block">
+      <div class="client-name">Distral</div>
+      
+      <div class="row" data-id="r1">
+        <input type="checkbox" class="check">
+        <div class="prodline">
+          <span class="qty">1</span>
+          <span>BOUCHON 7 EPICES FERMIER VRAC 5KGS</span> <span class="ref">[FBE09]</span>
+        </div>
+        <input class="field" placeholder="DLC">
+        <input class="field" placeholder="Lot">
+      </div>
+      <div class="row" data-id="r2">
+        <input type="checkbox" class="check">
+        <div class="prodline">
+          <span class="qty">14</span>
+          <span>BOUCHON NATURE VRAC 5KG</span> <span class="ref">[FBN08]</span>
+        </div>
+        <input class="field" placeholder="DLC">
+        <input class="field" placeholder="Lot">
+      </div>
+      <div class="row" data-id="r3">
+        <input type="checkbox" class="check">
+        <div class="prodline">
+          <span class="qty">2</span>
+          <span class="unsure">CERVELLE DE CANUT 180G***</span>
+        </div>
+        <input class="field" placeholder="DLC">
+        <input class="field" placeholder="Lot">
+      </div>
+      <div class="row" data-id="r4">
+        <input type="checkbox" class="check">
+        <div class="prodline">
+          <span class="qty">2</span>
+          <span class="unsure">FROMAGE FORT SEAU 2KG ABBAYE DES</span>
+        </div>
+        <input class="field" placeholder="DLC">
+        <input class="field" placeholder="Lot">
+      </div>
+    </div>
+    <div class="client-block">
+      <div class="client-name">Scapalyon</div>
+      
+      <div class="row" data-id="r5">
+        <input type="checkbox" class="check">
+        <div class="prodline">
+          <span class="qty">4 Kg</span>
+          <span class="unsure">FROMAGE FORT FERMIER BIO L. CRU SEAU</span>
+        </div>
+        <input class="field" placeholder="DLC">
+        <input class="field" placeholder="Lot">
+      </div>
+      <div class="row unsure-row" data-id="r6">
+        <input type="checkbox" class="check">
+        <div class="prodline">
+          <span class="unsure">⚠ ligne brute (chevauchement PDF, à relire) : "1049      Veuillez CERVELLE"</span>
+        </div>
+        <input class="field" placeholder="DLC">
+        <input class="field" placeholder="Lot">
+      </div>
+      <div class="row unsure-row" data-id="r7">
+        <input type="checkbox" class="check">
+        <div class="prodline">
+          <span class="unsure">⚠ ligne brute (chevauchement PDF, à relire) : "3243      Veuillez PETIT"</span>
+        </div>
+        <input class="field" placeholder="DLC">
+        <input class="field" placeholder="Lot">
+      </div>
+      <div class="row unsure-row" data-id="r8">
+        <input type="checkbox" class="check">
+        <div class="prodline">
+          <span class="unsure">⚠ ligne brute (chevauchement PDF, à relire) : "3244      Veuillez PETIT"</span>
+        </div>
+        <input class="field" placeholder="DLC">
+        <input class="field" placeholder="Lot">
+      </div>
+    </div>
+    <div class="client-block">
+      <div class="client-name">Logifresh</div>
+      
+      <div class="row" data-id="r9">
+        <input type="checkbox" class="check">
+        <div class="prodline">
+          <span class="qty">10</span>
+          <span class="unsure">BOUCHON BIO APERO 7 EPICES PCB 10</span> <span class="ref">[2932800]</span>
+        </div>
+        <input class="field" placeholder="DLC">
+        <input class="field" placeholder="Lot">
+      </div>
+      <div class="row" data-id="r10">
+        <input type="checkbox" class="check">
+        <div class="prodline">
+          <span class="qty">40</span>
+          <span class="unsure">BOUCHON BIO APERO VIN BLANC PCB</span> <span class="ref">[2934300]</span>
+        </div>
+        <input class="field" placeholder="DLC">
+        <input class="field" placeholder="Lot">
+      </div>
+      <div class="row" data-id="r11">
+        <input type="checkbox" class="check">
+        <div class="prodline">
+          <span class="qty">8</span>
+          <span class="unsure">REGAL S/SOUCI BIO FERMIER 200G</span> <span class="ref">[3744600]</span>
+        </div>
+        <input class="field" placeholder="DLC">
+        <input class="field" placeholder="Lot">
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-note">
+    Page générée automatiquement depuis les PDF du dossier input/. Les coches, DLC et numéros de lot sont
+    sauvegardés sur cet appareil/navigateur entre deux ouvertures. Régénérez cette page (node genererPageJour.js)
+    après chaque nouveau traitement de input/ pour avoir les commandes à jour.
+  </p>
+  <div class="footer-note" style="text-align:right;">
+    <button id="resetBtn">Réinitialiser la journée</button>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'carnet-2026-06-24';
+    const rows = document.querySelectorAll('.row[data-id]');
+    const progressEl = document.getElementById('progress');
+
+    function updateProgress() {
+      const total = rows.length;
+      const done = document.querySelectorAll('.check:checked').length;
+      progressEl.textContent = done + ' / ' + total + ' fait';
+    }
+
+    function saveState() {
+      const state = {};
+      rows.forEach((row) => {
+        const id = row.dataset.id;
+        const checkbox = row.querySelector('.check');
+        const fields = row.querySelectorAll('.field');
+        state[id] = { done: checkbox.checked, dlc: fields[0].value, lot: fields[1].value };
+      });
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) { console.warn(e); }
+    }
+
+    function loadState() {
+      let state = {};
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) state = JSON.parse(raw);
+      } catch (e) { console.warn(e); }
+      rows.forEach((row) => {
+        const saved = state[row.dataset.id];
+        if (!saved) return;
+        const checkbox = row.querySelector('.check');
+        const fields = row.querySelectorAll('.field');
+        checkbox.checked = !!saved.done;
+        row.classList.toggle('done', checkbox.checked);
+        fields[0].value = saved.dlc || '';
+        fields[1].value = saved.lot || '';
+      });
+    }
+
+    rows.forEach((row) => {
+      const checkbox = row.querySelector('.check');
+      const fields = row.querySelectorAll('.field');
+      checkbox.addEventListener('change', () => {
+        row.classList.toggle('done', checkbox.checked);
+        updateProgress();
+        saveState();
+      });
+      fields.forEach((field) => field.addEventListener('input', saveState));
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      if (confirm('Effacer toutes les coches, DLC et numéros de lot saisis pour cette journée ?')) {
+        localStorage.removeItem(STORAGE_KEY);
+        location.reload();
+      }
+    });
+
+    loadState();
+    updateProgress();
+  </script>
+</body>
+</html>

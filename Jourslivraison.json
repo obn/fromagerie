@@ -1,0 +1,59 @@
+{
+  "_commentaire": "Jour de livraison fixe par client. Valeurs possibles : lundi, mardi, mercredi, jeudi. La catégorie 'variable' liste les clients sans jour fixe (la date du PDF est utilisée telle quelle pour ceux-ci). Les entrées avec _incertain:true sont des lectures d'écriture manuscrite à vérifier.",
+
+  "variable": [
+    "LOGIFRESH"
+  ],
+
+  "lundi": [
+    "AUCHAN",
+    { "nom": "LECLERC GREZIEU", "_incertain": true, "_note": "lecture difficile, pourrait être Crozieu/Grézieu" }
+  ],
+
+  "mardi": [
+    "BOUCHERIE ANDRE ST BONNET",
+    "BOUCHERIE ANDRE BOURG EN BRESSE",
+    "BOUCHERIE ANDRE VILLEFRANCHE",
+    { "nom": "BOUCHERIE ANDRE VIRIAT", "_incertain": true, "_note": "lecture tres incertaine sur l'original" },
+    "BOUCHERIE ANDRE TIGNIEU",
+    "SCAPA",
+    { "nom": "CARREFOUR VILLARS", "_incertain": true, "_note": "ligne barree sur l'original, statut a confirmer" }
+  ],
+
+  "mercredi": [
+    "PERRET",
+    "DISPRODAL",
+    "U EXPRESS LYON MOUCHAT",
+    "U EXPRESS LYON CROIX ROUSSE",
+    "U EXPRESS LYON VAISE",
+    "CARREFOUR VILLEURBANNE",
+    { "nom": "U EXPRESS MONT PLAISIR", "_incertain": true },
+    "FERME DE COLLONGES",
+    "BOUCHERIE ANDRE RILLIEUX",
+    "INTER ST BONNET",
+    { "nom": "RELAIS LOCAL", "_incertain": true },
+    "LECLERC CIVRIEUX",
+    { "nom": "SUPER U LYON BERTRAND", "_incertain": true, "_note": "pourrait etre Berland" },
+    "SUPER U BONNEL",
+    { "nom": "U EXPRESS PART-DIEU", "_incertain": true },
+    "SUPER U LYON UNIVERSITE"
+  ],
+
+  "jeudi": [
+    "DISTRAL",
+    "FROMAGERIE DE CHATILLON",
+    "INTERMARCHE AMBERIEUX",
+    { "nom": "LECLERC TIGNIEU", "_incertain": true },
+    "INTERMARCHE CHATILLON",
+    "INTERMARCHE MEXIMIEUX",
+    "LECLERC BOURGOIN",
+    "SUPER U PONT D'AIN",
+    "SUPER U VILLARS LES DOMBES",
+    { "nom": "BIOCOOP FERME MEXIMIEUX", "_incertain": true },
+    { "nom": "DICINA", "_incertain": true, "_note": "code/sigle peu lisible" },
+    "INTERMARCHE ST ANDRE",
+    "CARREFOUR MEXIMIEUX",
+    "MAGASIN DE L'ABBAYE",
+    "BOURG TRAITEUR"
+  ]
+}

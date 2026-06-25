@@ -1,0 +1,79 @@
+{
+  "r1": {
+    "done": true,
+    "dlc": "",
+    "lot": "1265",
+    "produit": "BOUCHON BIO APERO 7 EPICES PCB 12",
+    "codeInterne": "2932800"
+  },
+  "r2": {
+    "done": true,
+    "dlc": "",
+    "lot": "9568",
+    "produit": "BOUCHON BIO APERO VIN BLANC PCB",
+    "codeInterne": "2934300"
+  },
+  "r3": {
+    "done": true,
+    "dlc": "",
+    "lot": "",
+    "produit": "REGAL S/SOUCI BIO FERMIER 200G",
+    "codeInterne": "3744600"
+  },
+  "r4": {
+    "done": true,
+    "dlc": "",
+    "lot": "",
+    "produit": "FROMAGE FORT FERMIER BIO L. CRU SEAU",
+    "codeInterne": ""
+  },
+  "r5": {
+    "done": false,
+    "dlc": "",
+    "lot": "",
+    "produit": "",
+    "codeInterne": ""
+  },
+  "r6": {
+    "done": false,
+    "dlc": "",
+    "lot": "",
+    "produit": "",
+    "codeInterne": ""
+  },
+  "r7": {
+    "done": false,
+    "dlc": "",
+    "lot": "",
+    "produit": "",
+    "codeInterne": ""
+  },
+  "r8": {
+    "done": true,
+    "dlc": "",
+    "lot": "",
+    "produit": "BOUCHON 7 EPICES FERMIER VRAC 5KGS",
+    "codeInterne": "FBE09"
+  },
+  "r9": {
+    "done": false,
+    "dlc": "",
+    "lot": "",
+    "produit": "BOUCHON NATURE VRAC 5KG",
+    "codeInterne": "FBN08"
+  },
+  "r10": {
+    "done": false,
+    "dlc": "",
+    "lot": "",
+    "produit": "CERVELLE DE CANUT 180G",
+    "codeInterne": ""
+  },
+  "r11": {
+    "done": false,
+    "dlc": "",
+    "lot": "",
+    "produit": "FROMAGE FORT SEAU 2KG ABBAYE DES",
+    "codeInterne": ""
+  }
+}
