@@ -7,7 +7,7 @@
 
   "lundi": [
     "AUCHAN",
-    { "nom": "LECLERC GREZIEU", "_incertain": true, "_note": "lecture difficile, pourrait être Crozieu/Grézieu" }
+    "LECLERC GREZIEU"
   ],
 
   "mardi": [
@@ -16,9 +16,8 @@
     "BOUCHERIE ANDRE VILLEFRANCHE",
     { "nom": "BOUCHERIE ANDRE VIRIAT", "_incertain": true, "_note": "lecture tres incertaine sur l'original" },
     "BOUCHERIE ANDRE TIGNIEU",
-    "SCAPA",
-    { "nom": "CARREFOUR VILLARS", "_incertain": true, "_note": "ligne barree sur l'original, statut a confirmer" }
-  ],
+    "SCAPA"
+],
 
   "mercredi": [
     "PERRET",
@@ -27,15 +26,15 @@
     "U EXPRESS LYON CROIX ROUSSE",
     "U EXPRESS LYON VAISE",
     "CARREFOUR VILLEURBANNE",
-    { "nom": "U EXPRESS MONT PLAISIR", "_incertain": true },
+    "U EXPRESS MONT PLAISIR",
     "FERME DE COLLONGES",
     "BOUCHERIE ANDRE RILLIEUX",
     "INTER ST BONNET",
-    { "nom": "RELAIS LOCAL", "_incertain": true },
+    "RELAIS LOCAL",
     "LECLERC CIVRIEUX",
-    { "nom": "SUPER U LYON BERTRAND", "_incertain": true, "_note": "pourrait etre Berland" },
+    "SUPER U LYON BERTRAND",
     "SUPER U BONNEL",
-    { "nom": "U EXPRESS PART-DIEU", "_incertain": true },
+    "U EXPRESS PART-DIEU",
     "SUPER U LYON UNIVERSITE"
   ],
 
@@ -43,14 +42,14 @@
     "DISTRAL",
     "FROMAGERIE DE CHATILLON",
     "INTERMARCHE AMBERIEUX",
-    { "nom": "LECLERC TIGNIEU", "_incertain": true },
+    "LECLERC TIGNIEU",
     "INTERMARCHE CHATILLON",
     "INTERMARCHE MEXIMIEUX",
     "LECLERC BOURGOIN",
     "SUPER U PONT D'AIN",
     "SUPER U VILLARS LES DOMBES",
-    { "nom": "BIOCOOP FERME MEXIMIEUX", "_incertain": true },
-    { "nom": "DICINA", "_incertain": true, "_note": "code/sigle peu lisible" },
+    "BIOCOOP FERME MEXIMIEUX",
+    "DICINA",
     "INTERMARCHE ST ANDRE",
     "CARREFOUR MEXIMIEUX",
     "MAGASIN DE L'ABBAYE",
